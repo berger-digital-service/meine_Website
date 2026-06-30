@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import {
+  Space_Grotesk,
+  IBM_Plex_Sans,
+  IBM_Plex_Mono,
+} from "next/font/google";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -21,9 +25,68 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Berger Digital Service — Webentwicklung, Standort-Präsenz, IT-Beratung",
+  metadataBase: new URL("https://berger-digital-service.com"),
+
+  title: {
+    default: "Berger Digital Service — Webentwicklung & SEO aus einer Hand",
+    template: "%s | Berger Digital Service",
+  },
+
   description:
-    "Junger Einzelunternehmer mit Begeisterung für Digitalisierung: Webentwicklung, Sichtbarkeit bei Google Maps & Apple Karten und IT-Beratung — persönlich umgesetzt.",
+    "Webentwicklung, SEO-Optimierung und digitale Sichtbarkeit für Unternehmen. Moderne Websites, schnelle Performance und bessere Google-Rankings.",
+
+  keywords: [
+    "Webentwicklung",
+    "Webdesign",
+    "SEO Agentur",
+    "Website erstellen lassen",
+    "Google Ranking verbessern",
+    "Digital Service",
+  ],
+
+  authors: [{ name: "Berger Digital Service" }],
+  creator: "Berger Digital Service",
+
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    url: "https://berger-digital-service.com",
+    siteName: "Berger Digital Service",
+    title: "Berger Digital Service — Webentwicklung & SEO",
+    description:
+      "Moderne Websites & SEO Optimierung für bessere Sichtbarkeit bei Google.",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Berger Digital Service",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Berger Digital Service — Webentwicklung & SEO",
+    description:
+      "Moderne Websites & SEO Optimierung für bessere Sichtbarkeit bei Google.",
+    images: ["/og-image.jpg"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
