@@ -1,7 +1,19 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+export async function POST(request: Request) {
+  if (!process.env.RESEND_API_KEY) {
+    console.error("RESEND_API_KEY fehlt!");
+    return NextResponse.json(
+      { error: "Server-Konfiguration fehlerhaft." },
+      { status: 500 }
+    );
+  }
+
+  const resend = new Resend(process.env.RESEND_API_KEY);
+
+  try {
+    // ...
 
 // Hierhin gehen alle Anfragen aus dem Kontaktformular.
 const EMPFAENGER = "john-berger@t-online.de";
