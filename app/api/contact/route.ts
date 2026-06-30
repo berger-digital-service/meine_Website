@@ -1,9 +1,11 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
+const EMPFAENGER = "john-berger@t-online.de";
+
 export async function POST(request: Request) {
   if (!process.env.RESEND_API_KEY) {
-    console.error("RESEND_API_KEY fehlt!");
+    console.error("RESEND_API_KEY fehlt");
     return NextResponse.json(
       { error: "Server-Konfiguration fehlerhaft." },
       { status: 500 }
@@ -12,13 +14,6 @@ export async function POST(request: Request) {
 
   const resend = new Resend(process.env.RESEND_API_KEY);
 
-  try {
-    // ...
-
-// Hierhin gehen alle Anfragen aus dem Kontaktformular.
-const EMPFAENGER = "john-berger@t-online.de";
-
-export async function POST(request: Request) {
   try {
     const { name, email, message } = await request.json();
 
@@ -30,9 +25,6 @@ export async function POST(request: Request) {
     }
 
     const { error } = await resend.emails.send({
-      // "onboarding@resend.dev" ist die kostenlose Test-Absenderadresse von
-      // Resend. Für den produktiven Betrieb später durch eine eigene,
-      // verifizierte Domain ersetzen (siehe README).
       from: "Berger Digital Service <onboarding@resend.dev>",
       to: EMPFAENGER,
       replyTo: email,
@@ -41,7 +33,7 @@ export async function POST(request: Request) {
     });
 
     if (error) {
-      console.error("Resend-Fehler:", error);
+      console.error(error);
       return NextResponse.json(
         { error: "Senden fehlgeschlagen." },
         { status: 500 }
@@ -50,7 +42,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true });
   } catch (err) {
-    console.error("Kontaktformular-Fehler:", err);
+    console.error(err);
     return NextResponse.json(
       { error: "Senden fehlgeschlagen." },
       { status: 500 }
