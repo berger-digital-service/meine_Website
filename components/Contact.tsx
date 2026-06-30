@@ -120,13 +120,13 @@ export default function Contact() {
                 <div className="font-mono text-[0.78rem] text-slate w-[90px] shrink-0 pt-0.5">
                   TELEFON
                 </div>
-                <div className="text-[0.98rem]">+49 123 456 789</div>
+                <div className="text-[0.98rem]">+49 176 76758771</div>
               </div>
               <div className="flex gap-3.5 items-start py-4.5 border-b border-line">
                 <div className="font-mono text-[0.78rem] text-slate w-[90px] shrink-0 pt-0.5">
                   STANDORT
                 </div>
-                <div className="text-[0.98rem]">Berlin, Deutschland</div>
+                <div className="text-[0.98rem]">Eckartsberga, Deutschland</div>
               </div>
               <div className="flex gap-3.5 items-start py-4.5">
                 <div className="font-mono text-[0.78rem] text-slate w-[90px] shrink-0 pt-0.5">
