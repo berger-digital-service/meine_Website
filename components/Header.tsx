@@ -35,7 +35,7 @@ export default function Header() {
     >
       <nav className="w-[90%] max-w-[1180px] mx-auto flex items-center justify-between">
         <div className="font-display font-bold text-xl tracking-tight">
-          <span className="text-signal-orange">Berger</span>Digital Service
+          <span className="text-signal-orange">Berger </span>Digital Service
         </div>
         <div className="flex items-center gap-9">
           <a
