@@ -6,6 +6,12 @@ import {
 } from "next/font/google";
 import "./globals.css";
 
+export const metadata = {
+  verification: {
+    google: "szdj4su7Ec8fr4QbD9V2NViEynjKRLt3OCaAV1RjmqI",
+  },
+};
+
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
