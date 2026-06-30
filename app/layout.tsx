@@ -26,25 +26,26 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://berger-digital-service.com"),
+
   verification: {
     google: "szdj4su7Ec8fr4QbD9V2NViEynjKRLt3OCaAV1RjmqI",
   },
-  
+
   title: {
-    default: "Berger Digital Service — Webentwicklung & SEO aus einer Hand",
+    default: "Berger Digital Service – Webentwicklung & SEO",
     template: "%s | Berger Digital Service",
   },
 
   description:
-    "Webentwicklung, SEO-Optimierung und digitale Sichtbarkeit für Unternehmen. Moderne Websites, schnelle Performance und bessere Google-Rankings.",
+    "Professionelle Webentwicklung, SEO-Optimierung und digitale Lösungen für Unternehmen. Moderne Websites mit hoher Performance.",
 
   keywords: [
     "Webentwicklung",
     "Webdesign",
-    "SEO Agentur",
-    "Website erstellen lassen",
-    "Google Ranking verbessern",
-    "Digital Service",
+    "SEO",
+    "Google Optimierung",
+    "Next.js",
+    "IT-Beratung",
   ],
 
   authors: [{ name: "Berger Digital Service" }],
@@ -55,9 +56,9 @@ export const metadata: Metadata = {
     locale: "de_DE",
     url: "https://berger-digital-service.com",
     siteName: "Berger Digital Service",
-    title: "Berger Digital Service — Webentwicklung & SEO",
+    title: "Berger Digital Service – Webentwicklung & SEO",
     description:
-      "Moderne Websites & SEO Optimierung für bessere Sichtbarkeit bei Google.",
+      "Professionelle Webentwicklung und SEO für Unternehmen.",
     images: [
       {
         url: "/og-image.jpg",
@@ -70,9 +71,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Berger Digital Service — Webentwicklung & SEO",
+    title: "Berger Digital Service – Webentwicklung & SEO",
     description:
-      "Moderne Websites & SEO Optimierung für bessere Sichtbarkeit bei Google.",
+      "Professionelle Webentwicklung und SEO für Unternehmen.",
     images: ["/og-image.jpg"],
   },
 
@@ -82,8 +83,6 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
     },
   },
 
@@ -94,9 +93,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="de">
       <body
