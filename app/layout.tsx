@@ -6,12 +6,6 @@ import {
 } from "next/font/google";
 import "./globals.css";
 
-export const metadata = {
-  verification: {
-    google: "szdj4su7Ec8fr4QbD9V2NViEynjKRLt3OCaAV1RjmqI",
-  },
-};
-
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -32,7 +26,10 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://berger-digital-service.com"),
-
+  verification: {
+    google: "szdj4su7Ec8fr4QbD9V2NViEynjKRLt3OCaAV1RjmqI",
+  },
+  
   title: {
     default: "Berger Digital Service — Webentwicklung & SEO aus einer Hand",
     template: "%s | Berger Digital Service",
