@@ -32,12 +32,12 @@ export const metadata: Metadata = {
   },
 
   title: {
-    default: "Berger Digital Service – Webentwicklung & SEO",
+    default: "Berger Digital Service – WEBENTWICKLUNG · STANDORT-PRÄSENZ · IT-BERATUNG",
     template: "%s | Berger Digital Service",
   },
 
   description:
-    "Professionelle Webentwicklung, SEO-Optimierung und digitale Lösungen für Unternehmen. Moderne Websites mit hoher Performance.",
+    "Von Webentwicklung mit SEO-Optimierung bis zur Standortpräsenz und digitaler Beratung für Unternehmen.",
 
   keywords: [
     "Webentwicklung",
