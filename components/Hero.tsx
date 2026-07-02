@@ -1,5 +1,15 @@
 import NetworkCanvas from "./NetworkCanvas";
 
+import Image from "next/image";
+
+<Image
+  src="/logo.png"
+  alt="Berger Digital Service Logo"
+  width={140}
+  height={40}
+  priority
+/>
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-[90px] overflow-hidden">
