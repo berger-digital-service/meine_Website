@@ -26,15 +26,15 @@ export default function About() {
             Jung, motiviert und mit voller Energie für Ihre Digitalisierung.
           </h2>
           <p className="text-slate text-[1rem] mb-4">
-            Ich habe Berger Digital Service gegründet, weil ich es liebe, aus
-            einer Idee einen funktionierenden digitalen Auftritt zu machen —
-            von der ersten Skizze bis zur fertigen Website.
+            Ich habe Berger Digital Service gegründet, weil ich das Zeil habe,
+            ihren digitalen Auftritt von der ersten Skizze bis zur fertigen Website
+            in enger Zusammenarbeit mit Ihnen zu realisieren.
           </p>
           <p className="text-slate text-[1rem]">
             Genau deshalb bekommen Sie bei mir alles aus einer Hand: Website,
-            Sichtbarkeit bei Google, Google Maps und Apple Karten, sowie
-            professionelle Fotos und Videos, die ich selbst mit meiner
-            Kamera direkt bei Ihnen vor Ort aufnehme.
+            Sichtbarkeit bei Google, Google Maps und Apple Karte sowie
+            professionelle Fotos und Videos, die ich selbst mit einer 
+            professionellen Kamera direkt bei Ihnen vor Ort aufnehme.
           </p>
         </Reveal>
       </div>
